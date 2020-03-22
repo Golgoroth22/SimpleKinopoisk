@@ -1,0 +1,14 @@
+<resources>
+    <!-- App -->
+    <string name="app_name">Kinopoisk</string>
+
+    <!-- Fragment Films-->
+    <string name="fragment_films_title_text">Фильмы</string>
+    <string name="fragment_films_genres_text">Жанры</string>
+    <string name="fragment_films_films_text">Фильмы</string>
+
+    <!-- Fragment Film Info -->
+    <string name="fragment_film_info_rating_prefix_text">"Рейтинг: "</string>
+    <string name="fragment_film_info_year_prefix_text">"Год: "</string>
+    <string name="fragment_film_info_description_empty_text">Описание отсутствует :(</string>
+</resources>

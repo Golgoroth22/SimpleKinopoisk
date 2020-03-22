@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    tools:context=".ui.fragments.FilmsFragment">
+
+    <TextView
+        android:id="@+id/fragment_films_genresText"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="@dimen/elevation_small"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/spacing_medium"
+        android:paddingLeft="@dimen/spacing_medium"
+        android:text="@string/fragment_films_genres_text"
+        android:textAppearance="@style/Text.Bold.22"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragment_films_genresRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryBackground"
+        android:minHeight="@dimen/genre_frame_minHeight"
+        android:overScrollMode="never"
+        android:paddingTop="@dimen/spacing_tiny_extra"
+        android:paddingBottom="@dimen/spacing_tiny_extra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_films_genresText"
+        tools:itemCount="3"
+        tools:listitem="@layout/item_genres_layout" />
+
+    <ProgressBar
+        android:id="@+id/fragment_films_genresProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/fragment_films_genresRecycler"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/fragment_films_genresRecycler"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_films_genresText" />
+
+    <TextView
+        android:id="@+id/fragment_films_filmsText"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="@dimen/elevation_small"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/spacing_medium"
+        android:paddingLeft="@dimen/spacing_medium"
+        android:text="@string/fragment_films_films_text"
+        android:textAppearance="@style/Text.Bold.22"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_films_genresRecycler" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragment_films_filmsRecycler"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimaryBackground"
+        android:overScrollMode="never"
+        android:paddingStart="@dimen/spacing_tiny_extra"
+        android:paddingEnd="@dimen/spacing_tiny_extra"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_films_filmsText"
+        tools:listitem="@layout/item_films_layout" />
+
+    <ProgressBar
+        android:id="@+id/fragment_films_filmsProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/fragment_films_filmsRecycler"
+        app:layout_constraintEnd_toEndOf="@+id/fragment_films_filmsRecycler"
+        app:layout_constraintStart_toStartOf="@+id/fragment_films_filmsRecycler"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_films_filmsText" />
+</androidx.constraintlayout.widget.ConstraintLayout>

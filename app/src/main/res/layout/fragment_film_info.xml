@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryBackground"
+    android:overScrollMode="never"
+    tools:context=".ui.fragments.FilmInfoFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/fragment_film_info_filmImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/spacing_small"
+            android:layout_marginLeft="@dimen/spacing_small"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:background="@android:color/black"
+            android:elevation="@dimen/elevation_small"
+            android:padding="@dimen/spacing_tiny_extra"
+            android:scaleType="centerCrop"
+            app:layout_constraintDimensionRatio="6:7"
+            app:layout_constraintEnd_toStartOf="@+id/fragment_film_info_titleText"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/fragment_film_info_titleText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_big"
+            android:layout_marginEnd="@dimen/spacing_big"
+            android:maxLines="5"
+            android:ellipsize="end"
+            android:textAppearance="@style/Text.Regular.16.gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="5"
+            app:layout_constraintStart_toEndOf="@+id/fragment_film_info_filmImage"
+            app:layout_constraintTop_toTopOf="@+id/fragment_film_info_filmImage" />
+
+        <TextView
+            android:id="@+id/fragment_film_info_yearText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:text="@string/fragment_film_info_year_prefix_text"
+            android:textAppearance="@style/Text.Regular.18.black"
+            app:layout_constraintEnd_toEndOf="@+id/fragment_film_info_titleText"
+            app:layout_constraintStart_toStartOf="@+id/fragment_film_info_titleText"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_film_info_titleText" />
+
+        <TextView
+            android:id="@+id/fragment_film_info_rating_prefixText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:text="@string/fragment_film_info_rating_prefix_text"
+            android:textAppearance="@style/Text.Regular.18.black"
+            app:layout_constraintEnd_toStartOf="@+id/fragment_film_info_ratingText"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/fragment_film_info_filmImage"
+            app:layout_constraintStart_toStartOf="@+id/fragment_film_info_titleText"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_film_info_yearText" />
+
+        <TextView
+            android:id="@+id/fragment_film_info_ratingText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/Text.Regular.20.green"
+            app:layout_constraintBottom_toBottomOf="@+id/fragment_film_info_rating_prefixText"
+            app:layout_constraintEnd_toEndOf="@+id/fragment_film_info_titleText"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/fragment_film_info_rating_prefixText" />
+
+        <TextView
+            android:id="@+id/fragment_film_info_descriptionText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_small"
+            android:background="@android:color/white"
+            android:padding="@dimen/elevation_tiny"
+            android:elevation="@dimen/elevation_tiny"
+            android:paddingStart="@dimen/spacing_small"
+            android:paddingEnd="@dimen/spacing_small"
+            android:textAppearance="@style/Text.Regular.16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_film_info_filmImage" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

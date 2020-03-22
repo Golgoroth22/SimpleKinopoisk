@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_genres_backgroundCard"
+    android:layout_width="@dimen/genre_width"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/spacing_tiny_extra">
+
+    <Button
+        android:id="@+id/item_genres_titleButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/genre_height"
+        android:background="?selectableItemBackground"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="1"
+        android:paddingStart="@dimen/spacing_small"
+        android:paddingEnd="@dimen/spacing_small"
+        android:textAppearance="@style/Text.Regular.18.black" />
+</androidx.cardview.widget.CardView>
